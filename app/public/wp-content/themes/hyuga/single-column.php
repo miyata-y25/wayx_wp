@@ -8,7 +8,7 @@
         <p class="single-area__date"><?php the_time('Y/m/d'); ?></p>
 <?php the_content(); ?>
     </div>
-    <a href="<?php echo home_url('/'); ?>news" class="btn btn--greW btn--312">一覧に戻る</a>
+    <a href="<?php echo home_url('/'); ?>column" class="btn btn--greW btn--312">一覧に戻る</a>
 </section>
 
 <?php get_footer(); ?>

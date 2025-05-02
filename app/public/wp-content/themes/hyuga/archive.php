@@ -14,7 +14,7 @@
     <ul class="news-list">
         <?php
             $args = array(
-                'category' => 2,
+                'category' => 'post',
                 'order' => 'DESC',
                 'orderby' => 'date',
                 'posts_per_page' => 10,
