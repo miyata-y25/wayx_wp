@@ -82,6 +82,85 @@
   color: #B7D100;
 }
 
+.column-list {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+@media screen and (max-width: 640px) {
+  .column-list {
+    width: 100%;
+  }
+}
+.column-list li {
+  margin-bottom: 3%;
+  font-weight: 500;
+}
+@media screen and (min-width: 641px) {
+  .column-list li {
+    width: 31%;
+  }
+  .column-list li:not(:nth-of-type(3n+1)) {
+    margin-left: 3.5%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .column-list li {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+}
+.column-list__img {
+  margin-bottom: 0.5em;
+}
+.column-list__img img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 100% !important;
+  height: 250px !important;
+}
+@media screen and (max-width: 1366px) {
+  .column-list__img img {
+    height: 15.625vw !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .column-list__img img {
+    height: 59.8453333333vw !important;
+    height: 50vw !important;
+  }
+}
+.column-list__time {
+  font-size: 1em;
+  color: #CCC;
+}
+.column-list__ttl {
+  font-size: 1.25em;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+.column-list__txt {
+  font-size: 1.125em;
+  margin-top: 0.5em;
+}
+.column-list .news-more {
+  text-align: left;
+  margin-top: 1em;
+}
+
 .single-area,
 .page-area {
   max-width: 1000px;
@@ -179,4 +258,28 @@
 }
 .page-area h2:not(:first-child), .page-area h3:not(:first-child), .page-area h4:not(:first-child), .page-area h5:not(:first-child), .page-area h6:not(:first-child) {
   margin-top: 2em;
+}
+
+.wp-pagenavi {
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wp-pagenavi span,
+.wp-pagenavi a {
+  display: block;
+  padding: 0;
+  width: 2em;
+  line-height: 2em;
+  font-size: 1.125em;
+}
+.wp-pagenavi a:hover {
+  color: #B7D100;
+  border-color: #B7D100;
 }

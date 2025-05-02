@@ -2,21 +2,41 @@
 
 <section class="top-main">
     <h1 class="top-main__ttl">
+        <?php
+            $topmain_args = array(
+                'post_type' => 'topmain',
+                'posts_per_page' => 1,
+            );
+            $topmain_query = new WP_Query($topmain_args);
+            if ($topmain_query->have_posts()) :
+                while ($topmain_query->have_posts()) : $topmain_query->the_post();
+        ?>
         <picture>
-            <source media="(min-width:641px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/main.png">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/main_sp.png" alt="WAYX（ウェイクス）FITNESS GYM 日向店 6/1 GRAND OPEN">
+            <source media="(min-width:641px)" srcset="<?php the_field('top-main-pc'); ?>">
+            <img src="<?php the_field('top-main-sp'); ?>" alt="<?php the_title(); ?>">
         </picture>
+        <?php endwhile; endif;
+            wp_reset_postdata();
+        ?>
     </h1>
     <div class="top-main__info" id="link01">
+        <?php
+            $topcam_args = array(
+                'post_type' => 'topcam',
+                'posts_per_page' => 1,
+            );
+            $topcam_query = new WP_Query($topcam_args);
+            if ($topcam_query->have_posts()) :
+                while ($topcam_query->have_posts()) : $topcam_query->the_post();
+        ?>
         <picture>
-            <source media="(min-width:641px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/camp_info.svg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/camp_info_sp.svg" alt="キャンペーン情報">
+            <source media="(min-width:641px)" srcset="<?php the_field('top-cam-pc'); ?>">
+            <img src="<?php the_field('top-cam-sp'); ?>" alt="<?php the_title(); ?>">
         </picture>
-        <ul class="top-main__note -note">
-            <li>※キャンペーン適用ありでのご入会の場合、特典1-5が適用となり、6ヶ月の在籍が条件となります。途中解約の場合、違約金11,000円(税込)を頂戴しております。</li>
-            <li>※移籍割は他クラブの在籍証明が必要となります。</li>
-            <li>※キャンペーン適用なしでのご入会の場合、特典1-2のみ適用でのご入会が可能です（その場合、在籍条件はなしとなります）。</li>
-        </ul>
+        <?php the_content(); ?>
+        <?php endwhile; endif;
+            wp_reset_postdata();
+        ?>
     </div>
 </section>
 
@@ -126,11 +146,11 @@
             <p class="txt">館内は無料Wi-Fiを完備。音楽や動画をご覧いただきながらトレーニング♪</p>
         </li>
     </ul>
-    <!-- <h2 class="yourself-sec__ttl --italic">MOVIE</h2>
+    <h2 class="yourself-sec__ttl --italic">MOVIE</h2>
     <figure class="yourself-sec__mv">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/yourself_mv.png" alt="">
     </figure>
-    <p class="news-more --wt"><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo_yt2.svg" alt="">Youtubeで見る</a></p> -->
+    <p class="news-more --wt"><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo_yt2.svg" alt="">Youtubeで見る</a></p>
 </section>
 
 <section class="saikyo-sec" id="link04">
@@ -629,49 +649,23 @@
                 </li>
             </ul>
         </div>
-        <!-- <div class="studio-slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper studio-list">
-                    <div class="swiper-slide studio-list__list">
-                        <figure class="studio-thum"><a href="https://www.youtube.com/watch?v=dC4GVI8XwZA" target="_blank"><img src="http://img.youtube.com/vi/dC4GVI8XwZA/maxresdefault.jpg" alt=""></a></figure>
-                        <h4 class="studio-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/studio_logo01.png" alt=""></h4>
-                        <p class="studio-txt">FIGHT DO®（ファイドウ）は、格闘技の動きをベースに 有酸素運動と無酸素運動の組み合わせにより、全身の筋力、持久力、俊敏性、柔軟性を効果的に向上させることができるクラスとなっています。</p>
-                    </div>
-                    <div class="swiper-slide studio-list__list">
-                        <figure class="studio-thum"><a href="https://www.youtube.com/watch?v=w6p3JR8b3ik" target="_blank"><img src="http://img.youtube.com/vi/w6p3JR8b3ik/maxresdefault.jpg" alt=""></a></figure>
-                        <h4 class="studio-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/studio_logo02.png" alt=""></h4>
-                        <p class="studio-txt">UBOUND(ユーバウンド)は、ミニトランポリンの特徴を生かした関節に負担の少ない、高強度プログラム。爆発的な運動量で脂肪燃焼効果や不安定なトランポリンで行うエクササイズは自然にコアを鍛えます。</p>
-                    </div>
-                    <div class="swiper-slide studio-list__list">
-                        <figure class="studio-thum"><a href="https://www.youtube.com/watch?v=zct_BLx3eD0" target="_blank"><img src="http://img.youtube.com/vi/zct_BLx3eD0/maxresdefault.jpg" alt=""></a></figure>
-                        <h4 class="studio-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/studio_logo03.png" alt=""></h4>
-                        <p class="studio-txt">RADICAL YOGA(ラディカルヨガ)は、体内の生命エネルギーを目覚めさせるポーズや呼吸、瞑想を行う事で、脊柱の調整、内臓の活性化、ストレス緩和、柔軟性を効果的に整えることができます。</p>
-                    </div>
-                    <div class="swiper-slide studio-list__list">
-                        <figure class="studio-thum"><a href="https://www.youtube.com/watch?v=k0diu2HDbRc" target="_blank"><img src="http://img.youtube.com/vi/k0diu2HDbRc/maxresdefault.jpg" alt=""></a></figure>
-                        <h4 class="studio-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/studio_logo04.png" alt=""></h4>
-                        <p class="studio-txt">OXIGENO(オキシジェノ)は、ヨガ、ピラティス、ダイナミックストレッチ、太極拳をベースにプログラムされており、呼吸と流れるような動きで柔軟性と可動域向上に効果的です。</p>
-                    </div>
-                    <div class="swiper-slide studio-list__list">
-                        <figure class="studio-thum"><a href="https://www.youtube.com/watch?v=s_dMk8T_ucA" target="_blank"><img src="http://img.youtube.com/vi/s_dMk8T_ucA/maxresdefault.jpg" alt=""></a></figure>
-                        <h4 class="studio-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/studio_logo05.png" alt=""></h4>
-                        <p class="studio-txt">MEGA DANZ(メガダンス)は、世界のダンスジャンルを音楽、振付、リズムで情熱的に表現する最高のダンスプログラムです。ダイエットや健康づくり、柔軟性向上にも効果的です。（フリースタイル、ラテンダンスあり）</p>
-                    </div>
-                    <div class="swiper-slide studio-list__list">
-                        <figure class="studio-thum"><a href="https://www.youtube.com/watch?v=0efpbNTN3FQ" target="_blank"><img src="http://img.youtube.com/vi/0efpbNTN3FQ/maxresdefault.jpg" alt=""></a></figure>
-                        <h4 class="studio-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/studio_logo06.png" alt=""></h4>
-                        <p class="studio-txt">RADICAL AERO(ラディカルエアロ)は、刺激的でエネルギッシュなエアロビクスの動きで構成され、脂肪燃焼、下半身強化、循環器機能向上を望む初心者も参加できるカーディオエクササイズプログラムです。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div> -->
-        <!-- <a href="#" class="studio-btn">スタジオレッスン<br>スケジュールはこちら</a> -->
+        <?php
+            $schedule_args = array(
+                'post_type' => 'schedule',
+                'posts_per_page' => 1,
+            );
+            $schedule_query = new WP_Query($schedule_args);
+            if ($schedule_query->have_posts()) :
+                while ($schedule_query->have_posts()) : $schedule_query->the_post();
+        ?>
+        <a href="<?php the_field('schedule-pdf'); ?>" target="_blank" class="studio-btn"><?php the_title(); ?><br>スケジュールはこちら</a>
+        <?php endwhile; endif;
+            wp_reset_postdata();
+        ?>
     </div>
 </section>
 
-<!-- <section class="personal-sec">
+<section class="personal-sec">
     <h3 class="personal-sec__ttl">
         <span class="">初心者の方も安心</span><br>
         パーソナルトレーニング<br>コース例のご紹介
@@ -686,7 +680,7 @@
             </p>
         </div>
     </div>
-</section> -->
+</section>
 
 <section class="sec -others">
     <h2 class="sec__ttl">
@@ -755,59 +749,40 @@
     </div>
 </section>
 
-<!-- <section class="sec -staff">
+<section class="sec -staff">
     <h2 class="sec__ttl">
         <span class="sec__ttl__en">STAFF</span>
         <span class="sec__ttl__jp">スタッフ紹介</span>
     </h2>
     <ul class="staff-list">
+        <?php
+            $staff_args = array(
+                'post_type' => 'staff',
+                'posts_per_page' => 100,
+            );
+            $staff_query = new WP_Query($staff_args);
+            if ($staff_query->have_posts()) :
+                while ($staff_query->have_posts()) : $staff_query->the_post();
+        ?>
         <li>
-            <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/staff_dammy.svg" alt=""></figure>
+            <figure><?php echo wp_get_attachment_image(get_post_meta($post->ID, 'staff-thumb', true), '240_thumbnail'); ?></figure>
             <div class="info">
-                <span class="name">店長：鈴木 一郎</span>
-                <span class="name_en">ICHIRO SUZUKI</span>
+                <span class="name"><?php the_field('staff-title'); ?>：<?php the_title(); ?></span>
+                <span class="name_en"><?php the_field('staff-name'); ?></span>
                 <dl>
                     <dt>保有資格</dt>
                     <dd>
-                        IBMA パーソナルストレッチ3級ベーシック<br>
-                        IBMA セルフストレッチトレーナー
+                        <?php the_field('staff-license'); ?>
                     </dd>
                 </dl>
             </div>
-            <p class="read">初めまして、鈴木一郎です！！<br>ジムで身体動かしたいけど、何をして良いかわからない。マシンの使い方がわからない。そういう方を楽しく続けられるようサポートさせていただきますので、よろしくお願いいたします！！</p>
+            <p class="read"><?php the_field('staff-read'); ?></p>
         </li>
-        <li>
-            <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/staff_dammy.svg" alt=""></figure>
-            <div class="info">
-                <span class="name">店長：鈴木 一郎</span>
-                <span class="name_en">ICHIRO SUZUKI</span>
-                <dl>
-                    <dt>保有資格</dt>
-                    <dd>
-                        IBMA パーソナルストレッチ3級ベーシック<br>
-                        IBMA セルフストレッチトレーナー
-                    </dd>
-                </dl>
-            </div>
-            <p class="read">初めまして、鈴木一郎です！！<br>ジムで身体動かしたいけど、何をして良いかわからない。マシンの使い方がわからない。そういう方を楽しく続けられるようサポートさせていただきますので、よろしくお願いいたします！！</p>
-        </li>
-        <li>
-            <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/staff_dammy.svg" alt=""></figure>
-            <div class="info">
-                <span class="name">店長：鈴木 一郎</span>
-                <span class="name_en">ICHIRO SUZUKI</span>
-                <dl>
-                    <dt>保有資格</dt>
-                    <dd>
-                        IBMA パーソナルストレッチ3級ベーシック<br>
-                        IBMA セルフストレッチトレーナー
-                    </dd>
-                </dl>
-            </div>
-            <p class="read">初めまして、鈴木一郎です！！<br>ジムで身体動かしたいけど、何をして良いかわからない。マシンの使い方がわからない。そういう方を楽しく続けられるようサポートさせていただきますので、よろしくお願いいたします！！</p>
-        </li>
+        <?php endwhile; endif;
+            wp_reset_postdata();
+        ?>
     </ul>
-</section> -->
+</section>
 
 <div class="sns-area">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sns_img.svg" alt="SNS投稿を応援!!">
@@ -865,36 +840,42 @@
     </div>
 </section>
 
-<!-- <section class="sec --column">
+<section class="sec --column">
     <h2 class="sec__ttl2">
         <span class="sec__ttl2__sub"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_readme.svg" alt="read me"></span>
         <span class="sec__ttl2__en">Column</span>
     </h2>
     <ul class="column-list">
+        <?php
+            $column_args = array(
+                'post_type' => 'column',
+                'order' => 'DESC',
+                'orderby' => 'date',
+                'posts_per_page' => 3,
+            );
+            $column_query = new WP_Query($column_args);
+            if ($column_query->have_posts()) :
+                while ($column_query->have_posts()) : $column_query->the_post();
+        ?>
         <li>
-            <figure class="column-list__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_img.png" alt=""></figure>
-            <time datetime="2025-03-01" class="column-list__time">2025.03.01</time>
-            <h3 class="column-list__ttl">40代からの美ボディはここから始まる！ウェイクスで楽しく楽しく続けるパーソナ…</h3>
-            <p class="column-list__txt">運動したいけど、なかなか続かない」「体も心もリフレッシュしたい」そんな風に感じている40代以上の女性の方はいませんか？</p>
-            <p class="news-more"><a href="column/detail.html">READ MORE</a></p>
+            <figure class="column-list__img">
+                <?php if ( has_post_thumbnail() ) : ?>
+                <?php the_post_thumbnail(); ?>
+                <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_img.png" alt="">
+                <?php endif; ?>
+            </figure>
+            <time datetime="<?php the_time('Y-m-d'); ?>" class="column-list__time"><?php the_time('Y/m/d'); ?></time>
+            <h3 class="column-list__ttl"><?php the_title(); ?></h3>
+            <p class="column-list__txt"><?php the_excerpt(); ?></p>
+            <p class="news-more"><a href="<?php the_permalink(); ?>">READ MORE</a></p>
         </li>
-        <li>
-            <figure class="column-list__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_img.png" alt=""></figure>
-            <time datetime="2025-03-01" class="column-list__time">2025.03.01</time>
-            <h3 class="column-list__ttl">40代からの美ボディはここから始まる！ウェイクスで楽しく楽しく続けるパーソナ…</h3>
-            <p class="column-list__txt">運動したいけど、なかなか続かない」「体も心もリフレッシュしたい」そんな風に感じている40代以上の女性の方はいませんか？</p>
-            <p class="news-more"><a href="column/detail.html">READ MORE</a></p>
-        </li>
-        <li>
-            <figure class="column-list__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_img.png" alt=""></figure>
-            <time datetime="2025-03-01" class="column-list__time">2025.03.01</time>
-            <h3 class="column-list__ttl">40代からの美ボディはここから始まる！ウェイクスで楽しく楽しく続けるパーソナ…</h3>
-            <p class="column-list__txt">運動したいけど、なかなか続かない」「体も心もリフレッシュしたい」そんな風に感じている40代以上の女性の方はいませんか？</p>
-            <p class="news-more"><a href="column/detail.html">READ MORE</a></p>
-        </li>
+        <?php endwhile; endif;
+            wp_reset_postdata();
+        ?>
     </ul>
     <a href="column/" class="btn btn--greW btn--590">全ての記事を読む</a>
-</section> -->
+</section>
 
 <section class="sec --insta">
     <h2 class="sec__ttl2">
@@ -906,30 +887,28 @@
     </figure>
 </section>
 
-<!-- <section class="sec --faq">
+<section class="sec --faq">
     <h2 class="sec__ttl">
         <span class="sec__ttl__en">FAQ</span>
         <span class="sec__ttl__jp">よくあるご質問</span>
     </h2>
+    <?php
+        $faq_args = array(
+            'post_type' => 'faq',
+            'posts_per_page' => 100,
+        );
+        $faq_query = new WP_Query($faq_args);
+        if ($faq_query->have_posts()) :
+            while ($faq_query->have_posts()) : $faq_query->the_post();
+    ?>
     <details class="faq-list aco-cont">
-        <summary class="faq-list__head aco-cont__head">運動が苦手でも大丈夫ですか？</summary>
-        <p class="faq-list__body aco-cont__body">
-            もちろん大丈夫です。初心者の方でもスタッフが丁寧にレクチャーをさせていただきます。
-        </p>
+        <summary class="faq-list__head aco-cont__head"><?php the_title(); ?></summary>
+        <p class="faq-list__body aco-cont__body"><?php the_field('faq-anser'); ?></p>
     </details>
-    <details class="faq-list aco-cont">
-        <summary class="faq-list__head aco-cont__head">体験/入会時は何を持っていけば良いですか？</summary>
-        <p class="faq-list__body aco-cont__body">
-            もちろん大丈夫です。初心者の方でもスタッフが丁寧にレクチャーをさせていただきます。
-        </p>
-    </details>
-    <details class="faq-list aco-cont">
-        <summary class="faq-list__head aco-cont__head">パーソナルトレーニングは体験できますか？</summary>
-        <p class="faq-list__body aco-cont__body">
-            もちろん大丈夫です。初心者の方でもスタッフが丁寧にレクチャーをさせていただきます。
-        </p>
-    </details>
-</section> -->
+    <?php endwhile; endif;
+        wp_reset_postdata();
+    ?>
+</section>
 
 <section class="sec --access" id="link07">
     <h2 class="sec__ttl">
