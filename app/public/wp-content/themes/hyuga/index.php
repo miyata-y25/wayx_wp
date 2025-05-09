@@ -883,7 +883,7 @@
         <span class="sec__ttl2__en">Instagram</span>
     </h2>
     <figure class="insta-list">
-        <a href="https://www.instagram.com/fitnessgym_wayx_hyuga/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/insta_img.png" alt=""></a>
+        <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
     </figure>
 </section>
 

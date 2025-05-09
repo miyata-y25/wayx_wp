@@ -259,13 +259,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li class="g-nav__list"><a href="#link07">アクセス</a></li>
                     <li class="g-nav__list"><a href="https://www.slim-sng.jp/slim/web/d/sng/member_login/?c=Yu38Htf2P4&f=00001" target="_blank" class="gnav-btn">マイページ</a></li>
                     <?php else: ?>
-                    <li class="g-nav__list"><a href="/#link01">キャンペーン</a></li>
-                    <li class="g-nav__list"><a href="/#link02">ニュース</a></li>
-                    <li class="g-nav__list"><a href="/#link03">コンセプト</a></li>
-                    <li class="g-nav__list"><a href="/#link04">ジム</a></li>
-                    <li class="g-nav__list"><a href="/#link05">スタジオ</a></li>
-                    <li class="g-nav__list"><a href="/#link06">料金</a></li>
-                    <li class="g-nav__list"><a href="/#link07">アクセス</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link01">キャンペーン</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link02">ニュース</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link03">コンセプト</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link04">ジム</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link05">スタジオ</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link06">料金</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link07">アクセス</a></li>
                     <li class="g-nav__list"><a href="https://www.slim-sng.jp/slim/web/d/sng/member_login/?c=Yu38Htf2P4&f=00001" target="_blank" class="gnav-btn">マイページ</a></li>
                     <?php endif; ?>
                 </ul>
