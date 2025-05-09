@@ -8,9 +8,7 @@
 <footer class="site-footer">
     <h3 class="site-footer__logo"><img src="https://wayx.jp/wp-content/themes/WAYX-theme/images/logo-1.png" alt="WAYX 入会"></h3>
     <ul class="site-footer__nav">
-        <li><a href="/commercial_law/">特定商取引法に基づく表記</a></li>
-        <li><a href="/privacy/">プライバシーポリシー</a></li>
-        <li><a href="/contact/">お問い合わせ</a></li>
+        <li><a href="<?php echo home_url('/'); ?>law/">特定商取引法に基づく表記</a></li>
     </ul>
     <p class="copyright">
         掲載されている写真はイメージです<br>
