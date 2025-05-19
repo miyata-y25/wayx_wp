@@ -665,6 +665,7 @@
     </div>
 </section>
 
+<?php /*
 <section class="personal-sec">
     <h3 class="personal-sec__ttl">
         <span class="">初心者の方も安心</span><br>
@@ -681,6 +682,7 @@
         </div>
     </div>
 </section>
+*/?>
 
 <section class="sec -others">
     <h2 class="sec__ttl">
@@ -749,6 +751,7 @@
     </div>
 </section>
 
+<?php /*
 <section class="sec -staff">
     <h2 class="sec__ttl">
         <span class="sec__ttl__en">STAFF</span>
@@ -770,7 +773,7 @@
                 <span class="name"><?php the_field('staff-title'); ?>：<?php the_title(); ?></span>
                 <span class="name_en"><?php the_field('staff-name'); ?></span>
                 <dl>
-                    <dt>保有資格</dt>
+                    <dt>保有資格・運動歴</dt>
                     <dd>
                         <?php the_field('staff-license'); ?>
                     </dd>
@@ -783,6 +786,7 @@
         ?>
     </ul>
 </section>
+*/?>
 
 <div class="sns-area">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sns_img.svg" alt="SNS投稿を応援!!">
@@ -840,6 +844,7 @@
     </div>
 </section>
 
+<?php /*
 <section class="sec --column">
     <h2 class="sec__ttl2">
         <span class="sec__ttl2__sub"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_readme.svg" alt="read me"></span>
@@ -876,6 +881,7 @@
     </ul>
     <a href="column/" class="btn btn--greW btn--590">全ての記事を読む</a>
 </section>
+*/?>
 
 <section class="sec --insta">
     <h2 class="sec__ttl2">
@@ -887,6 +893,7 @@
     </figure>
 </section>
 
+<?php /*
 <section class="sec --faq">
     <h2 class="sec__ttl">
         <span class="sec__ttl__en">FAQ</span>
@@ -909,6 +916,7 @@
         wp_reset_postdata();
     ?>
 </section>
+*/?>
 
 <section class="sec --access" id="link07">
     <h2 class="sec__ttl">
