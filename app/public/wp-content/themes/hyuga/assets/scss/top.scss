@@ -936,6 +936,10 @@ body {
         }
         figure {
             width: 10em;
+            img {
+                width: 100%;
+                height: auto;
+            }
         }
         .info {
             width: calc(100% - 12em);
@@ -1095,12 +1099,17 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     @include max-screen($screen-xs) {
         width: 100%;
     }
     li {
-        width: 31%;
+        @include min-screen($screen-xs + 1) {
+            width: 31%;
+            &:not(:nth-of-type(3n+1)) {
+                margin-left: 3.5%;
+            }
+        }
         margin-bottom: 3%;
         font-weight: 500;
         @include max-screen($screen-xs) {
@@ -1110,6 +1119,18 @@ body {
     }
     &__img {
         margin-bottom: 0.5em;
+        img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 250px !important;
+            @include max-screen($screen-xl) {
+                height: (15000vw/960) !important;
+            }
+            @include max-screen($screen-xs) {
+                height: (22442vw/375) !important;
+                height: 50vw !important;
+            }
+        }
     }
     &__time {
         font-size: (16em/16);

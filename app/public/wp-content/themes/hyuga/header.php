@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
+<meta name="google-site-verification" content="X8DsbhJ7Jq55EaXEx9bpnL0azWb__nKB4Hx0F8z9vbg" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -259,13 +260,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li class="g-nav__list"><a href="#link07">アクセス</a></li>
                     <li class="g-nav__list"><a href="https://www.slim-sng.jp/slim/web/d/sng/member_login/?c=Yu38Htf2P4&f=00001" target="_blank" class="gnav-btn">マイページ</a></li>
                     <?php else: ?>
-                    <li class="g-nav__list"><a href="/#link01">キャンペーン</a></li>
-                    <li class="g-nav__list"><a href="/#link02">ニュース</a></li>
-                    <li class="g-nav__list"><a href="/#link03">コンセプト</a></li>
-                    <li class="g-nav__list"><a href="/#link04">ジム</a></li>
-                    <li class="g-nav__list"><a href="/#link05">スタジオ</a></li>
-                    <li class="g-nav__list"><a href="/#link06">料金</a></li>
-                    <li class="g-nav__list"><a href="/#link07">アクセス</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link01">キャンペーン</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link02">ニュース</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link03">コンセプト</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link04">ジム</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link05">スタジオ</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link06">料金</a></li>
+                    <li class="g-nav__list"><a href="<?php echo home_url('/'); ?>#link07">アクセス</a></li>
                     <li class="g-nav__list"><a href="https://www.slim-sng.jp/slim/web/d/sng/member_login/?c=Yu38Htf2P4&f=00001" target="_blank" class="gnav-btn">マイページ</a></li>
                     <?php endif; ?>
                 </ul>
