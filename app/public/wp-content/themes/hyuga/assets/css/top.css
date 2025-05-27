@@ -361,14 +361,9 @@
 }
 .saikyo-sec__ttl {
   text-align: center;
-  margin-bottom: -20em;
+  margin-bottom: 3em;
   position: relative;
   z-index: 1;
-}
-@media screen and (max-width: 640px) {
-  .saikyo-sec__ttl {
-    margin-bottom: -43vw;
-  }
 }
 .saikyo-sec__ttl img {
   width: 90%;
@@ -400,6 +395,34 @@
 }
 .saikyo-sec__ttl3:not(:first-child) {
   margin-top: 1em;
+}
+.saikyo-sec__read {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+.saikyo-sec__thum {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.saikyo-sec__thum img {
+  max-width: 800px;
+  width: 80%;
+}
+.saikyo-sec__sub {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -20em;
+}
+.saikyo-sec__sub img {
+  max-width: 28.125em;
+}
+@media screen and (max-width: 640px) {
+  .saikyo-sec__sub {
+    margin-bottom: -43vw;
+  }
 }
 .saikyo-sec__bdy {
   padding: 23em 20px 15vw;
