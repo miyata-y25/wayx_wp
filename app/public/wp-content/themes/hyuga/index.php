@@ -146,11 +146,13 @@
             <p class="txt">館内は無料Wi-Fiを完備。音楽や動画をご覧いただきながらトレーニング♪</p>
         </li>
     </ul>
+    <?php /*
     <h2 class="yourself-sec__ttl --italic">MOVIE</h2>
     <figure class="yourself-sec__mv">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/yourself_mv.png" alt="">
     </figure>
     <p class="news-more --wt"><a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo_yt2.svg" alt="">Youtubeで見る</a></p>
+    */?>
 </section>
 
 <section class="saikyo-sec" id="link04">
@@ -935,7 +937,7 @@
     </dl>
     <dl class="access-dl">
         <dt>TEL</dt>
-        <dd>0985-65-7278　オープン準備室（WAYX宮崎店内）</dd>
+        <dd>0982-66-8021</dd>
     </dl>
     <dl class="access-dl">
         <dt>営業時間</dt>

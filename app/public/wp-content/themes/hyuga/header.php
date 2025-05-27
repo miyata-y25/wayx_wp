@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
+<meta name="google-site-verification" content="X8DsbhJ7Jq55EaXEx9bpnL0azWb__nKB4Hx0F8z9vbg" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
