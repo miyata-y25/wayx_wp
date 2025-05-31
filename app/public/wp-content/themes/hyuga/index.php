@@ -76,7 +76,7 @@
     </div>
     <ul class="yourself-sec__list" data-simplebar data-simplebar-auto-hide="false">
         <li class="grid__list">
-            <h3 class="ttl">日向市最強ジム！</h3>
+            <h3 class="ttl">フィットネスジム</h3>
             <figure class="img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/yourself_logo01.svg" alt="">
             </figure>
@@ -104,7 +104,7 @@
             <p class="txt">パワーラック3台、垂直式スミスマシン1台、傾斜式スミスマシン1台、準公式ベンチ2台！</p>
         </li>
         <li class="grid__list">
-            <h3 class="ttl">日向初暗闇スタジオ</h3>
+            <h3 class="ttl">暗闇スタジオ</h3>
             <figure class="img">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/yourself_logo05.svg" alt="">
             </figure>
@@ -159,9 +159,18 @@
     <h2 class="saikyo-sec__ttl">
         <picture>
             <source media="(min-width:641px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/saikyo_ttl.svg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/saikyo_ttl_sp.svg" alt="日向市最強ジム×日向市初暗闇スタジオ">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/saikyo_ttl_sp.svg" alt="フィットネスジム×暗闇バーチャルスタジオ">
         </picture>
     </h2>
+    <p class="saikyo-sec__read">
+        海の家をイメージした、明るい店内で<br>「いつでも、だれでも、自分らしく」<br class="sp-show">始められる、続けられるフィットネスジムです。
+    </p>
+    <figure class="saikyo-sec__thum">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/saikyo_img.png" alt="">
+    </figure>
+    <p class="saikyo-sec__sub">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/saikyo_ttl_sub.svg" alt="フィットネスジム">
+    </p>
     <div class="saikyo-sec__bdy">
         <p class="saikyo-sec__txt">オリンピック選手など、トップレベル競技者用のトレーニング施設、<br>国立ナショナルトレーニングセンターにも導入されている世界的に有名なノーチラスマシン導入！
         </p>
@@ -815,7 +824,7 @@
         <dt>月会費</dt>
         <dd>
             <span>レギュラー会員<br>7,150円（税込）</span><br>
-            トレーニングジムが<br>営業時間内に利用可能
+            ジム＋スタジオが<br>営業時間内に利用可能
         </dd>
     </dl>
 </section>
@@ -941,11 +950,7 @@
     </dl>
     <dl class="access-dl">
         <dt>営業時間</dt>
-        <dd>プレオープン＆無料開放　期間特別営業時間<br>
-            平日10:00−22:00（15:00−17:00クローズ）受付21：30まで<br>
-            土日10:00−18:00　受付17:30まで　※金曜日休館<br>
-            <br>
-            6/1グランドオープン後は下記になります<br>
+        <dd>
             営業時間：24時間営業<br>
             スタッフタイム：平日：9:00～21:00/土日祝：9:00～18:00<br>
             ノースタッフデー：金曜日
