@@ -904,7 +904,6 @@
     </figure>
 </section>
 
-<?php /*
 <section class="sec --faq">
     <h2 class="sec__ttl">
         <span class="sec__ttl__en">FAQ</span>
@@ -927,7 +926,6 @@
         wp_reset_postdata();
     ?>
 </section>
-*/?>
 
 <section class="sec --access" id="link07">
     <h2 class="sec__ttl">

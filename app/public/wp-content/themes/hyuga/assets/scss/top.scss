@@ -1255,6 +1255,7 @@ body {
         margin-top: 0;
         position: relative;
         font-weight: 500;
+        white-space: pre-wrap;
         @include max-screen($screen-xs) {
             padding-left: (30em/18);
             padding-right: (30em/18);

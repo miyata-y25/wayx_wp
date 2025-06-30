@@ -1436,6 +1436,7 @@
   margin-top: 0;
   position: relative;
   font-weight: 500;
+  white-space: pre-wrap;
 }
 @media screen and (max-width: 640px) {
   .faq-list__body {
