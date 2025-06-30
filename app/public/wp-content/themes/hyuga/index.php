@@ -855,7 +855,6 @@
     </div>
 </section>
 
-<?php /*
 <section class="sec --column">
     <h2 class="sec__ttl2">
         <span class="sec__ttl2__sub"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/column_readme.svg" alt="read me"></span>
@@ -892,7 +891,6 @@
     </ul>
     <a href="column/" class="btn btn--greW btn--590">全ての記事を読む</a>
 </section>
-*/?>
 
 <section class="sec --insta">
     <h2 class="sec__ttl2">
