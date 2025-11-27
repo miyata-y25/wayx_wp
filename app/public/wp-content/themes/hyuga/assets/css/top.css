@@ -5,12 +5,23 @@
 /*==================================================================================================
     main
 ==================================================================================================*/
+.top-main__infottl {
+  margin-top: -26.0416666667vw;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (max-width: 640px) {
+  .top-main__infottl {
+    margin-top: -12.5333333333vw;
+  }
+}
 .top-main__info {
   background: url(../img/top/camp_bg.png) no-repeat;
   background-position: center;
   background-size: cover;
   padding: 5em 20px;
   text-align: center;
+  margin-top: 3%;
 }
 @media screen and (max-width: 640px) {
   .top-main__info {

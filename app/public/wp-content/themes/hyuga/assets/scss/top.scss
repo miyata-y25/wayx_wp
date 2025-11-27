@@ -16,12 +16,21 @@ body {
     main
 ==================================================================================================*/
 .top-main {
+    &__infottl {
+        margin-top: (-50000vw/1920);
+        position: relative;
+        z-index: -1;
+        @include max-screen($screen-xs) {
+            margin-top: (-4700vw/375);
+        }
+    }
     &__info {
         background: url(../img/top/camp_bg.png) no-repeat;
         background-position: center;
         background-size: cover;
         padding: 5em 20px;
         text-align: center;
+        margin-top: 3%;
         @include max-screen($screen-xs) {
             padding-top: 20px;
             padding-bottom: 20px;

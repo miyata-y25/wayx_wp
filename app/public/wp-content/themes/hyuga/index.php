@@ -19,25 +19,35 @@
             wp_reset_postdata();
         ?>
     </h1>
+    <?php
+        $topcam_args = array(
+            'post_type' => 'topcam',
+            'posts_per_page' => 1,
+        );
+        $topcam_query = new WP_Query($topcam_args);
+        if ($topcam_query->have_posts()) :
+            while ($topcam_query->have_posts()) : $topcam_query->the_post();
+    ?>
+    <?php if( get_field('top-cam-pc') ):?>
+    <?php /*
+    <h2 class="top-main__infottl">
+        <picture>
+            <source media="(min-width:641px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/main_info_ttl.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/main_info_ttl_sp.png" alt="">
+        </picture>
+    </h2>
+    */?>
     <div class="top-main__info" id="link01">
-        <?php
-            $topcam_args = array(
-                'post_type' => 'topcam',
-                'posts_per_page' => 1,
-            );
-            $topcam_query = new WP_Query($topcam_args);
-            if ($topcam_query->have_posts()) :
-                while ($topcam_query->have_posts()) : $topcam_query->the_post();
-        ?>
         <picture>
             <source media="(min-width:641px)" srcset="<?php the_field('top-cam-pc'); ?>">
             <img src="<?php the_field('top-cam-sp'); ?>" alt="<?php the_title(); ?>">
         </picture>
         <?php the_content(); ?>
-        <?php endwhile; endif;
-            wp_reset_postdata();
-        ?>
     </div>
+    <?php endif; ?>
+    <?php endwhile; endif;
+        wp_reset_postdata();
+    ?>
 </section>
 
 <a href="https://jp.indeed.com/jobs?q=WAYX&l=%E5%AE%AE%E5%B4%8E%E7%9C%8C+%E6%97%A5%E5%90%91%E5%B8%82&radius=25&from=searchOnDesktopSerp&vjk=d69854c8e03e548b&advn=4445808393267962

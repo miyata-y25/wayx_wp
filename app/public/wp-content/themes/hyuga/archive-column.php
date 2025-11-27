@@ -9,7 +9,7 @@
 
 <section class="sec">
     <h2 class="sec__ttl">
-        <span class="sec__ttl__en"><?php the_title(); ?></span>
+        <span class="sec__ttl__en">COLUMN</span>
     </h2>
     <ul class="column-list">
         <?php
