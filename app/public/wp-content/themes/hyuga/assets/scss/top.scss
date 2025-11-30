@@ -28,11 +28,10 @@ body {
         background: url(../img/top/camp_bg.png) no-repeat;
         background-position: center;
         background-size: cover;
-        padding: 5em 20px;
+        padding: calc(15vw + 3em) 20px 5em;
+        margin-top: -15vw;
         text-align: center;
-        margin-top: 3%;
         @include max-screen($screen-xs) {
-            padding-top: 20px;
             padding-bottom: 20px;
         }
         img {
